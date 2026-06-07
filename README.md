@@ -1,79 +1,89 @@
-# CineVault (Expo / React Native)
+# 🎬 CineVault - Movie Browsing App
 
-Cross‑platform movie browsing app built with **Expo (SDK 50+)** and **React Native**, powered entirely by **TMDB (The Movie Database) API**—no custom backend required.
+A cross-platform React Native movie browsing app built with Expo.
+Browse trending, top-rated, and upcoming movies, watch trailers inline,
+and save movies to your watchlist.
 
-## Preview
-Add your screenshots / screen recordings here:
+## 📱 Demo
 
-- `docs/screenshots/home.png`
-- `docs/screenshots/search.png`
-- `docs/screenshots/detail.png`
-- `docs/screenshots/watchlist.png`
+[Insert your screen recording GIF here]
 
-## Features
-- Hero section with the #1 trending movie (backdrop + gradient overlay)
-- Carousels: **Trending**, **Top Rated**, **Upcoming**
-- Debounced search with genre + year filters
-- Movie detail page: cast, trailers (inline YouTube), similar movies
-- Persistent watchlist (AsyncStorage) + swipe-to-remove
-- Simple in‑memory request caching to avoid redundant TMDB calls
+---
 
-## Setup
-1. Clone the repo
-2. Install dependencies
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file in the project root:
-   ```bash
-   TMDB_API_KEY=your_key_here
-   ```
-4. Run the app:
-   ```bash
-   npx expo start
-   ```
+## 🛠 Tech Stack
 
-### TMDB API key
-Register / create an API key here: https://www.themoviedb.org/settings/api
+| Category | Library | Version |
+|---|---|---|
+| Framework | Expo | 54.0.0 |
+| Language | React Native | 0.76.x |
+| Navigation | React Navigation | 6.x |
+| Stack Navigator | @react-navigation/native-stack | 6.x |
+| Bottom Tabs | @react-navigation/bottom-tabs | 6.x |
+| Video Player | react-native-youtube-iframe | 2.x |
+| HTTP Client | Axios | 1.x |
+| Fonts | @expo-google-fonts/inter + montserrat | latest |
+| Storage | @react-native-async-storage/async-storage | 1.x |
 
-## Tech stack
-- Expo (SDK 54+)
-- React Navigation v6 (Stack + Bottom Tabs)
-- Axios (TMDB API)
-- React Context + useReducer (global state)
-- AsyncStorage (watchlist + recent searches)
-- expo-image (image caching)
-- StyleSheet + design tokens (`src/constants/theme.js`)
+---
 
-## Dependencies (versions)
-See `package.json` for the complete list. Key dependencies:
-- expo: `^54.0.0`
-- react-native: `0.81.5`
-- @react-navigation/native: `^6.1.18`
-- axios: `^1.7.2`
-- expo-image: `~3.0.11`
-- @react-native-async-storage/async-storage: `2.2.0`
+## ⚙️ Environment Variables Setup
 
-## Folder structure
-```
-/src
-  /api         → tmdb.js (Axios instance, TMDB calls, in-memory cache)
-  /components  → MovieCard, HeroSection, GenreBadge, RatingStars, TrailerPlayer, Loader, SearchBar
-  /screens     → HomeScreen, SearchScreen, MovieDetailScreen, WatchlistScreen, AboutScreen
-  /navigation  → AppNavigator.js, TabNavigator.js
-  /context     → MovieContext.js (watchlist + recent searches persistence)
-  /hooks       → useFetch.js, useSearch.js, useDebounce.js
-  /constants   → theme.js, api.js
-  /utils       → helpers.js (formatting + rating color)
+1. Get a free TMDB API key from: https://www.themoviedb.org/settings/api
+
+2. Create a `.env` file in the project root:
+TMDB_API_KEY=your_api_key_here
+
+3. Never commit your `.env` file (it's in `.gitignore`)
+
+---
+
+## 🚀 Installation & Running
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/cinevault-react-native.git
+
+# Navigate into project
+cd cinevault-react-native
+
+# Install dependencies
+npm install
+
+# Create .env file and add your TMDB API key (see above)
+
+# Start the app
+npx expo start --clear
 ```
 
-## Known limitations / future improvements
-- “Search + genre filter” currently filters genres client‑side after the TMDB search endpoint returns results.
-  - Future improvement: switch to `/discover/movie` when using advanced filters.
-- Trailer playback depends on YouTube availability in the user’s region.
-- Add true pagination (infinite scrolling) for all lists (currently implemented for Top Rated + Upcoming on Home).
-- Add offline caching for watchlist movie details (optional).
+Then scan the QR code with **Expo Go** app on your phone.
 
-## Credits
-This product uses the TMDB API but is not endorsed or certified by TMDB.
+---
 
+## 📁 Folder Structure
+src/
+├── api/          → TMDB API calls
+├── components/   → Reusable UI components
+├── screens/      → Home, Search, Detail, Watchlist
+├── navigation/   → App & Tab navigators
+├── context/      → Global state management
+├── hooks/        → Custom hooks
+├── constants/    → Theme, colors, spacing
+└── utils/        → Helper functions
+
+---
+
+## ✨ Features
+
+- 🏠 Home screen with Hero section + 3 movie carousels
+- 🔍 Real-time search with debounce + genre/year filters
+- 🎬 Inline YouTube trailer playback
+- 📋 Movie detail screen with cast, rating, plot
+- ❤️ Persistent watchlist via AsyncStorage
+
+---
+
+## 🔑 API Reference
+
+- Data Source: [TMDB API](https://www.themoviedb.org/)
+- Base URL: `https://api.themoviedb.org/3`
+- Images: `https://image.tmdb.org/t/p/w500`
