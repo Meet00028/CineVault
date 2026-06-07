@@ -37,10 +37,9 @@ Add your screenshots / screen recordings here:
 Register / create an API key here: https://www.themoviedb.org/settings/api
 
 ## Tech stack
-- Expo (SDK 50+)
+- Expo (SDK 54+)
 - React Navigation v6 (Stack + Bottom Tabs)
 - Axios (TMDB API)
-- react-native-youtube-iframe (trailers)
 - React Context + useReducer (global state)
 - AsyncStorage (watchlist + recent searches)
 - expo-image (image caching)
@@ -48,13 +47,12 @@ Register / create an API key here: https://www.themoviedb.org/settings/api
 
 ## Dependencies (versions)
 See `package.json` for the complete list. Key dependencies:
-- expo: `~51.0.0`
-- react-native: `0.74.3`
-- @react-navigation/native: `^6.1.17`
+- expo: `^54.0.0`
+- react-native: `0.81.5`
+- @react-navigation/native: `^6.1.18`
 - axios: `^1.7.2`
-- expo-image: `~1.12.12`
-- react-native-youtube-iframe: `^2.3.0`
-- @react-native-async-storage/async-storage: `1.23.1`
+- expo-image: `~3.0.11`
+- @react-native-async-storage/async-storage: `2.2.0`
 
 ## Folder structure
 ```
