@@ -6,7 +6,7 @@ and save movies to your watchlist.
 
 ## Demo
 
-[Insert your screen recording GIF here]
+[▶️ Click to Watch App Demo](https://drive.google.com/file/d/1jRl4A0Zev2cue_riSLFYrt1Cl4zDKBvf/view?usp=sharing)
 
 ---
 
