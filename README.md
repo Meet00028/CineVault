@@ -4,13 +4,13 @@ A cross-platform React Native movie browsing app built with Expo.
 Browse trending, top-rated, and upcoming movies, watch trailers inline,
 and save movies to your watchlist.
 
-## 📱 Demo
+## Demo
 
 [Insert your screen recording GIF here]
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Category | Library | Version |
 |---|---|---|
@@ -26,7 +26,7 @@ and save movies to your watchlist.
 
 ---
 
-## ⚙️ Environment Variables Setup
+## Environment Variables Setup
 
 1. Get a free TMDB API key from: https://www.themoviedb.org/settings/api
 
@@ -37,7 +37,7 @@ TMDB_API_KEY=your_api_key_here
 
 ---
 
-## 🚀 Installation & Running
+## Installation & Running
 
 ```bash
 # Clone the repository
@@ -59,7 +59,7 @@ Then scan the QR code with **Expo Go** app on your phone.
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 src/
 ├── api/          → TMDB API calls
 ├── components/   → Reusable UI components
@@ -72,7 +72,7 @@ src/
 
 ---
 
-## ✨ Features
+## Features
 
 - 🏠 Home screen with Hero section + 3 movie carousels
 - 🔍 Real-time search with debounce + genre/year filters
@@ -82,7 +82,7 @@ src/
 
 ---
 
-## 🔑 API Reference
+## API Reference
 
 - Data Source: [TMDB API](https://www.themoviedb.org/)
 - Base URL: `https://api.themoviedb.org/3`
